@@ -29,7 +29,7 @@ public struct Position: Sendable {
   public var enPassant: EnPassant?
 
   /// Indicates whether the en passant stored in `enPassant` is valid.
-  var enPassantIsPossible: Bool
+  public var enPassantIsPossible: Bool
 
   /// Keeps track of the number of moves in a game for the current position.
   public private(set) var clock: Clock
