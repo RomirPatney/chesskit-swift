@@ -28,7 +28,7 @@ struct EnPassant: Hashable, Sendable {
   /// and `pawn`, other validations may be required such as whether or not
   /// the side with `capturingPiece` has passed their opportunity to capture
   /// by en passant.
-  func couldBeCaptured(by capturingPiece: Piece) -> Bool {
+  public func couldBeCaptured(by capturingPiece: Piece) -> Bool {
     capturingPiece.kind == .pawn && capturingPiece.color == pawn.color.opposite && capturingPiece.square.rank == pawn.square.rank
       && abs(capturingPiece.square.file.number - pawn.square.file.number) == 1
   }
