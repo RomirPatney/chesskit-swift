@@ -26,7 +26,7 @@ public struct Position: Sendable {
   /// Contains information about a pawn that can be captured by en passant.
   ///
   /// This property is set whenever a pawn moves by 2 squares.
-  var enPassant: EnPassant?
+  public var enPassant: EnPassant?
 
   /// Indicates whether the en passant stored in `enPassant` is valid.
   var enPassantIsPossible: Bool
