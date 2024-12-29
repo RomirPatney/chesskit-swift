@@ -7,10 +7,10 @@
 struct EnPassant: Hashable, Sendable {
 
   /// Pawn that is capable of being captured by en passant.
-  var pawn: Piece
+  public var pawn: Piece
 
   /// The square that the capturing pawn will move to after the en passant.
-  var captureSquare: Square {
+  public var captureSquare: Square {
     Square(pawn.square.file, pawn.color == .white ? 3 : 6)
   }
 
